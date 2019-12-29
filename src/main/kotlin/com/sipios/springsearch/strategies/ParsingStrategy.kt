@@ -1,6 +1,7 @@
 package com.sipios.springsearch.strategies
 
 import com.sipios.springsearch.SearchOperation
+import java.time.Instant
 import java.util.Date
 import javax.persistence.criteria.CriteriaBuilder
 import javax.persistence.criteria.Path
@@ -43,6 +44,7 @@ interface ParsingStrategy {
                 Float::class -> FloatStrategy()
                 Int::class -> IntStrategy()
                 Date::class -> DateStrategy()
+                Instant::class -> InstantStrategy()
                 else -> StringStrategy()
             }
         }

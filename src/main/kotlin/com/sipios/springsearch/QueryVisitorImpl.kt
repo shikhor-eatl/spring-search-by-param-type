@@ -1,7 +1,5 @@
 package com.sipios.springsearch
 
-import com.sipios.springsearch.grammar.QueryBaseVisitor
-import com.sipios.springsearch.grammar.QueryParser
 import org.springframework.data.jpa.domain.Specification
 
 class QueryVisitorImpl<T> : QueryBaseVisitor<Specification<T>>() {
